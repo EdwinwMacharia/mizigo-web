@@ -3,6 +3,8 @@ use App\Http\Livewire\HomeComponent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\subadmin\SubadminDashboardComponent;
 use App\Http\Livewire\superadmin\SuperadminDashboardComponent;
+use App\Http\Livewire\superadmin\AdminAddUserComponent;
+use App\Http\Livewire\DashboardComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +27,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 });
 
 Route::middleware(['auth:sanctum', 'verified','authadmin'])->group(function(){
-    Route::get('/superadmin/dashboard',SuperadminDashboardComponent::class)->name('superadmin.dashboard');
+    Route::get('/admin/dashboard',SuperadminDashboardComponent::class)->name('superadmin.dashboard');
+    Route::get('/admin/adduser',AdminAddUserComponent::class)->name('superadmin.adduser');
+    Route::get('/admin/dashboard',DashboardComponent::class )->name('dashboard');
 });
