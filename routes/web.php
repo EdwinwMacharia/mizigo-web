@@ -5,6 +5,7 @@ use App\Http\Livewire\subadmin\SubadminDashboardComponent;
 use App\Http\Livewire\superadmin\SuperadminDashboardComponent;
 use App\Http\Livewire\superadmin\AdminAddUserComponent;
 use App\Http\Livewire\DashboardComponent;
+use App\Http\Livewire\superadmin\AdminUsersComponent;
 
 /*
 |--------------------------------------------------------------------------
