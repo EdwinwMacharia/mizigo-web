@@ -30,4 +30,5 @@ Route::middleware(['auth:sanctum', 'verified','authadmin'])->group(function(){
     Route::get('/admin/dashboard',SuperadminDashboardComponent::class)->name('superadmin.dashboard');
     Route::get('/admin/adduser',AdminAddUserComponent::class)->name('superadmin.adduser');
     Route::get('/admin/dashboard',DashboardComponent::class )->name('dashboard');
+    Route::get('admin/users',AdminUsersComponent::class)->name('superadmin.users');
 });

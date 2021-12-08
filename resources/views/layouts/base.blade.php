@@ -52,9 +52,9 @@
           <a href="#"><i class="fa fa-cogs"></i>
             <span>Admin Settings <i class="lnr lnr-chevron-right"></i></span></a>
           <ul class="sub-menu-list">
-            <li><a href="{{route('superadmin.adduser')}}">Users</a> </li>
-            <li><a href="cards.html">Default cards</a> </li>
-            <li><a href="people.html">People cards</a></li>
+            <li><a href="{{route('superadmin.users')}}">Users</a> </li>
+            <li><a href="cards.html">Drivers</a> </li>
+            <li><a href="people.html">Vehicles</a></li>
           </ul>
         </li>
         <li><a href="pricing.html"><i class="fa fa-table"></i> <span>Pricing tables</span></a></li>
@@ -202,7 +202,10 @@
   </div>
   <!-- //header-ends -->
   <!-- main content start -->
+ <div class="container">
  {{$slot}}
+ </div>
+ 
 <!-- main content end-->
 </section>
   <!--footer section start-->
@@ -290,7 +293,9 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+@livewireScripts
 
+@stack('scripts')
 </body>
 
 </html>
