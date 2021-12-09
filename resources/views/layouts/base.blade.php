@@ -14,6 +14,7 @@
 
   <!-- google fonts -->
   <link href="//fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset('assets/css/jquery.dataTables.css')}}">
   @livewireStyles
 </head>
 
@@ -52,8 +53,8 @@
           <a href="#"><i class="fa fa-cogs"></i>
             <span>Admin Settings <i class="lnr lnr-chevron-right"></i></span></a>
           <ul class="sub-menu-list">
-            <li><a href="{{route('superadmin.users')}}">Users</a> </li>
-            <li><a href="cards.html">Drivers</a> </li>
+            <li><a href="{{route('superadmin.users')}}">Drivers</a> </li>
+            <li><a href="cards.html">Users</a> </li>
             <li><a href="people.html">Vehicles</a></li>
           </ul>
         </li>
@@ -243,6 +244,7 @@
 
 <script src="{{asset('assets/js/jquery-3.3.1.min.js')}}"></script>
 <script src="{{asset('assets/js/jquery-1.10.2.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.dataTables.min.js')}}"></script>
 
 <!-- chart js -->
 <script src="{{asset('assets/js/Chart.min.js')}}"></script>
@@ -257,7 +259,11 @@
 
 <script src="{{asset('assets/js/jquery.nicescroll.js')}}"></script>
 <script src="{{asset('assets/js/scripts.js')}}"></script>
-
+<script>
+  $(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
 <!-- close script -->
 <script>
   var closebtns = document.getElementsByClassName("close-grid");
