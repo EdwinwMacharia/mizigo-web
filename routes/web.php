@@ -6,6 +6,7 @@ use App\Http\Livewire\superadmin\SuperadminDashboardComponent;
 use App\Http\Livewire\superadmin\AdminAddUserComponent;
 use App\Http\Livewire\DashboardComponent;
 use App\Http\Livewire\superadmin\AdminUsersComponent;
+use App\Http\Livewire\superadmin\DriversComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +33,5 @@ Route::middleware(['auth:sanctum', 'verified','authadmin'])->group(function(){
     Route::get('/admin/adduser',AdminAddUserComponent::class)->name('superadmin.adduser');
     Route::get('/admin/dashboard',DashboardComponent::class )->name('dashboard');
     Route::get('admin/users',AdminUsersComponent::class)->name('superadmin.users');
+    Route::get('/drivers',DriversComponent::class)->name('superadmin.drivers');
 });
