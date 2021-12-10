@@ -26,7 +26,7 @@
 
     <!-- logo start -->
     <div class="logo">
-      <h1><a href="index.html">Collective</a></h1>
+      <h1><a href="index.html">MiziGo LTD</a></h1>
     </div>
 
   <!-- if logo is image enable this -->
@@ -58,9 +58,9 @@
             <li><a href="people.html">Vehicles</a></li>
           </ul>
         </li>
-        <li><a href="pricing.html"><i class="fa fa-table"></i> <span>Pricing tables</span></a></li>
-        <li><a href="blocks.html"><i class="fa fa-th"></i> <span>Content blocks</span></a></li>
-        <li><a href="forms.html"><i class="fa fa-file-text"></i> <span>Forms</span></a></li>
+        <li><a href="#"><i class="fa fa-table"></i> <span>Dspatches</span></a></li>
+        <li><a href="#"><i class="fa fa-th"></i> <span>Fueling</span></a></li>
+        <li><a href="#"><i class="fa fa-file-text"></i> <span>Reports</span></a></li>
       </ul>
       <!-- //sidebar nav end -->
       <!-- toggle button start -->
