@@ -5,8 +5,10 @@ use App\Http\Livewire\subadmin\SubadminDashboardComponent;
 use App\Http\Livewire\superadmin\SuperadminDashboardComponent;
 use App\Http\Livewire\superadmin\AdminAddUserComponent;
 use App\Http\Livewire\DashboardComponent;
+use App\Http\Livewire\ReportIncidentComponent;
 use App\Http\Livewire\superadmin\AdminUsersComponent;
 use App\Http\Livewire\superadmin\DriversComponent;
+use App\Http\Livewire\superadmin\AddDriverComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +25,7 @@ use App\Http\Livewire\superadmin\DriversComponent;
 //     return view('welcome');
 // });
 Route::get('/',HomeComponent::class);
+Route::get('/admin/reportissue',ReportIncidentComponent::class)->name('reportissue');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
    Route::get('/subadmin/dashboard',SubadminDashboardComponent::class)->name('subadmin.dashboard');
@@ -34,4 +37,5 @@ Route::middleware(['auth:sanctum', 'verified','authadmin'])->group(function(){
     Route::get('/admin/dashboard',DashboardComponent::class )->name('dashboard');
     Route::get('admin/users',AdminUsersComponent::class)->name('superadmin.users');
     Route::get('/drivers',DriversComponent::class)->name('superadmin.drivers');
+    Route::get('/admin/adddrivers',AddDriverComponent::class)->name('superadmin.adddriver');
 });

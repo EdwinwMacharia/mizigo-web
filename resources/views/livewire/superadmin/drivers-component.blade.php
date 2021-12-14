@@ -17,9 +17,9 @@
           <div class="card card_border p-4">
             <div class="card-header chart-grid__header pl-0 pt-0">
               All Drivers
-              <div class="col-md-3 pull-right">
-              <button type="button" class="btn btn-success">Add Driver</button>
-              </div>
+              <div class="col-md-6">
+                 <a href="{{route('superadmin.adddriver')}}" class="btn btn-success pull-right">Add New Driver</a>
+                </div>
             </div>
             <div class="messaging">
             <table id="example" class="table table-striped table-bordered" style="width:100%">
@@ -495,12 +495,12 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Phone</th>
+                <th>Location</th>
+                <th>Documents</th>
+                <th>Vehicles</th>
             </tr>
         </tfoot>
     </table>

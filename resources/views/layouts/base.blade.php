@@ -26,7 +26,7 @@
 
     <!-- logo start -->
     <div class="logo">
-      <h1><a href="index.html">MiziGo LTD</a></h1>
+      <h1><a href="/">MiziGo LTD</a></h1>
     </div>
 
   <!-- if logo is image enable this -->
@@ -61,6 +61,7 @@
         <li><a href="#"><i class="fa fa-table"></i> <span>Dspatches</span></a></li>
         <li><a href="#"><i class="fa fa-th"></i> <span>Fueling</span></a></li>
         <li><a href="#"><i class="fa fa-file-text"></i> <span>Reports</span></a></li>
+        <li><a href="{{route('reportissue')}}"><i class="fa fa-exclamation-circle"></i> <span>Incident Report</span></a></li>
       </ul>
       <!-- //sidebar nav end -->
       <!-- toggle button start -->
@@ -97,21 +98,21 @@
                     </div>
                   </li>
                   <li><a href="#" class="grid">
-                      <div class="user_img"><img src="assets/images/avatar1.jpg" alt=""></div>
+                      <div class="user_img"><img src="{{asset('assets/images/avatar1.jpg')}}" alt=""></div>
                       <div class="notification_desc">
                         <p>Johnson purchased template</p>
                         <span>Just Now</span>
                       </div>
                     </a></li>
                   <li class="odd"><a href="#" class="grid">
-                      <div class="user_img"><img src="assets/images/avatar2.jpg" alt=""></div>
+                      <div class="user_img"><img src="{{asset('assets/images/avatar2.jpg')}}" alt=""></div>
                       <div class="notification_desc">
                         <p>New customer registered </p>
                         <span>1 hour ago</span>
                       </div>
                     </a></li>
                   <li><a href="#" class="grid">
-                      <div class="user_img"><img src="assets/images/avatar3.jpg" alt=""></div>
+                      <div class="user_img"><img src="{{asset('assets/images/avatar3.jpg')}}" alt=""></div>
                       <div class="notification_desc">
                         <p>Lorem ipsum dolor sit amet </p>
                         <span>2 hours ago</span>
@@ -134,28 +135,28 @@
                     </div>
                   </li>
                   <li><a href="#" class="grid">
-                      <div class="user_img"><img src="assets/images/avatar1.jpg" alt=""></div>
+                      <div class="user_img"><img src="{{asset('assets/images/avatar1.jpg')}}" alt=""></div>
                       <div class="notification_desc">
                         <p>Johnson purchased template</p>
                         <span>Just Now</span>
                       </div>
                     </a></li>
                   <li class="odd"><a href="#" class="grid">
-                      <div class="user_img"><img src="assets/images/avatar2.jpg" alt=""></div>
+                      <div class="user_img"><img src="{{asset('assets/images/avatar2.jpg')}}" alt=""></div>
                       <div class="notification_desc">
                         <p>New customer registered </p>
                         <span>1 hour ago</span>
                       </div>
                     </a></li>
                   <li><a href="#" class="grid">
-                      <div class="user_img"><img src="assets/images/avatar3.jpg" alt=""></div>
+                      <div class="user_img"><img src="{{asset('assets/images/avatar3.jpg')}}" alt=""></div>
                       <div class="notification_desc">
                         <p>Lorem ipsum dolor sit amet </p>
                         <span>2 hours ago</span>
                       </div>
                     </a></li>
                   <li><a href="#" class="grid">
-                      <div class="user_img"><img src="assets/images/avatar1.jpg" alt=""></div>
+                      <div class="user_img"><img src="{{asset('assets/images/avatar1.jpg')}}" alt=""></div>
                       <div class="notification_desc">
                         <p>Johnson purchased template</p>
                         <span>Just Now</span>
@@ -176,7 +177,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="dropdownMenu3" aria-haspopup="true"
                   aria-expanded="false">
                   <div class="profile_img">
-                    <img src="assets/images/profileimg.jpg" class="rounded-circle" alt="" />
+                    <img src="{{asset('assets/images/profileimg.jpg')}}" class="rounded-circle" alt="" />
                     <div class="user-active">
                       <span></span>
                     </div>
