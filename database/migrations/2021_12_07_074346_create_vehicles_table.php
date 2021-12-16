@@ -15,6 +15,15 @@ class CreateVehiclesTable extends Migration
     {
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
+            $table->string('vehicle_docs')->nullable();
+            $table->bigInteger('user_id')->unsigned()->nullable();
+            $table->string('contract_drtn');
+            $table->string('make');
+            $table->string('model');
+            $table->string('tonnage');
+            $table->bigInteger('status');
+            $table->string('owned_by');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

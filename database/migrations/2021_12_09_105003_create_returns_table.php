@@ -15,12 +15,12 @@ class CreateReturnsTable extends Migration
     {
         Schema::create('returns', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('vehicle_id')->unsigned()->nullable();
+            $table->bigInteger('vehicle_id')->unsigned();
             $table->decimal('amount');
-            $table->bigInteger('user_id')->unsigned()->nullable();
+            $table->bigInteger('user_id')->unsigned();
             $table->foreign('vehicle_id')->references('id')->on('vehicles')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('load_desc')->nullable();
+            $table->string('load_desc');
             $table->timestamps();
 
         });

@@ -15,6 +15,7 @@
   <!-- google fonts -->
   <link href="//fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('assets/css/jquery.dataTables.css')}}">
+
   @livewireStyles
 </head>
 
@@ -59,7 +60,8 @@
           </ul>
         </li>
         <li><a href="#"><i class="fa fa-table"></i> <span>Dspatches</span></a></li>
-        <li><a href="#"><i class="fa fa-th"></i> <span>Fueling</span></a></li>
+        <li><a href="{{route('fueling-info')}}"><i class="fa fa-th"></i> <span>Fueling</span></a></li>
+        <li><a href="#"><i class="fa fa-th"></i> <span>Returns</span></a></li>
         <li><a href="#"><i class="fa fa-file-text"></i> <span>Reports</span></a></li>
         <li><a href="{{route('reportissue')}}"><i class="fa fa-exclamation-circle"></i> <span>Incident Report</span></a></li>
       </ul>
@@ -246,6 +248,8 @@
 <script src="{{asset('assets/js/jquery-3.3.1.min.js')}}"></script>
 <script src="{{asset('assets/js/jquery-1.10.2.min.js')}}"></script>
 <script src="{{asset('assets/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('assets/js/dataTables.dateTime.min.js')}}"></script>
+<script src="{{asset('assets/js/moment.min.js')}}"></script>
 
 <!-- chart js -->
 <script src="{{asset('assets/js/Chart.min.js')}}"></script>

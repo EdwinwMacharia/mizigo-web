@@ -17,9 +17,9 @@
           <div class="card card_border p-4">
             <div class="card-header chart-grid__header pl-0 pt-0">
               All Users
-              <div class="col-md-3 pull-right">
-              <button type="button" class="btn btn-success">Add User</button>
-              </div>
+              <div class="col-md-6 pull-right">
+                 <a href="{{route('superadmin.adduser')}}" class="btn btn-success">Add New User</a>
+                     </div>
             </div>
             <div class="data-tables">
       <div class="row">
