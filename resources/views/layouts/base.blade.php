@@ -57,6 +57,7 @@
             <li><a href="{{route('superadmin.drivers')}}">Drivers</a> </li>
             <li><a href="{{route('superadmin.users')}}">Users</a> </li>
             <li><a href="people.html">Vehicles</a></li>
+            <li><a href="{{route('rates')}}">Rates</a></li>
           </ul>
         </li>
         <li><a href="#"><i class="fa fa-table"></i> <span>Dspatches</span></a></li>

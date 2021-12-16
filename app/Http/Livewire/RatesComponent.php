@@ -8,6 +8,6 @@ class RatesComponent extends Component
 {
     public function render()
     {
-        return view('livewire.rates-component')->layouts('layouts.base');
+        return view('livewire.rates-component')->layout('layouts.base');
     }
 }
