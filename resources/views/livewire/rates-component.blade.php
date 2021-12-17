@@ -18,7 +18,7 @@
             <div class="card-header chart-grid__header pl-0 pt-0">
               All Rates
               <div class="col-md-6 pull-right">
-                 <a href="{{route('superadmin.adduser')}}" class="btn btn-success">Add New Rates</a>
+                 <a href="{{route('superadmin.addrates')}}" class="btn btn-success">Add New Rates</a>
                      </div>
             </div>
             <div class="data-tables">
@@ -28,27 +28,26 @@
             <div class="table-responsive">
               <table id="example" class="display" style="width:100%">
                 <thead>
+                  
                   <tr>
                     <th>ID</th>
-                    <th>Cost</th>
                     <th>Route</th>
+                    <th>Rates</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
+                @foreach($rates as $rate)
                   <tr>
-                    <td> 1</td>
-                    <td>6030</td>
-                    <td>Machakos</td>
-                    <td><span class="badge badge-success">Success</span></td>
+                    <td> {{$rate->id}}</td>
+                    <td>{{$rate->route}}</td>
+                    <td>{{$rate->rate}}</td>
+                    <td>
+                    <a href="{{route('superadmin.editrate',['rate_id'=>$rate->id])}}"><i class="fa fa-eye"></i></a>
+                    <a href="" wire:click.prevent="deleteRate({{$rate->id}})" onclick="confirm('Are you sure, You want to delete Coupon?') || event.stopImediatePropagation()"><i class="fa fa-trash"></i></a>
+                    </td>
                   </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>8060</td>
-                    <td>Nakuru</td>
-                    <td><span class="badge badge-success">Active</span></td>
-                  </tr>
-           
+                @endforeach
                </tbody>
               </table>
             </div>
