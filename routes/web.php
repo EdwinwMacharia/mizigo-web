@@ -5,8 +5,8 @@ use App\Http\Livewire\subadmin\SubadminDashboardComponent;
 use App\Http\Livewire\superadmin\SuperadminDashboardComponent;
 use App\Http\Livewire\superadmin\AdminAddUserComponent;
 use App\Http\Livewire\DashboardComponent;
-use App\Http\Livewire\FuelingComponent;
 use App\Http\Livewire\RatesComponent;
+use App\Http\Livewire\FuelingDataComponent;
 use App\Http\Livewire\AddFuelDataComponent;
 use App\Http\Livewire\ReportIncidentComponent;
 use App\Http\Livewire\superadmin\AdminUsersComponent;
@@ -32,9 +32,9 @@ use App\Http\Livewire\superadmin\EditRateComponent;
 // });
 Route::get('/',HomeComponent::class);
 Route::get('/admin/reportissue',ReportIncidentComponent::class)->name('reportissue');
-Route::get('/admin/fueling-data',FuelingComponent::class)->name('fueling-info');
 Route::get('/rates',RatesComponent::class)->name('rates');
-Route::get('/add-fuel-date',AddFuelDataComponent::class)->name('add-fuel-data');
+Route::get('/add-fuel-data',AddFuelDataComponent::class)->name('add-fuel-data');
+Route::get('/fueling-data',FuelingDataComponent::class)->name('fueling-data');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
    Route::get('/subadmin/dashboard',SubadminDashboardComponent::class)->name('subadmin.dashboard');

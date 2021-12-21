@@ -61,7 +61,7 @@
           </ul>
         </li>
         <li><a href="#"><i class="fa fa-table"></i> <span>Dispatches</span></a></li>
-        <li><a href="{{route('fueling-info')}}"><i class="fa fa-th"></i> <span>Fueling</span></a></li>
+        <li><a href="{{route('fueling-data')}}"><i class="fa fa-th"></i> <span>Fueling</span></a></li>
         <li><a href="#"><i class="fa fa-th"></i> <span>Returns</span></a></li>
         <li><a href="#"><i class="fa fa-file-text"></i> <span>Reports</span></a></li>
         <li><a href="{{route('reportissue')}}"><i class="fa fa-exclamation-circle"></i> <span>Incident Report</span></a></li>

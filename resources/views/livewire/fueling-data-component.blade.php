@@ -6,7 +6,7 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb my-breadcrumb">
         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Drivers</li>
+        <li class="breadcrumb-item active" aria-current="page">Fuel</li>
       </ol>
     </nav>
  
@@ -16,32 +16,24 @@
         <div class="col-lg-12 chart-grid mb-4">
           <div class="card card_border p-4">
             <div class="card-header chart-grid__header pl-0 pt-0">
-              All Records
-              <div class="col-md-3 pull-right">
-                 <a href=""><i class="fa fa-print"></i></a>
-                 <a href=""><i class="fa fa-download"></i></a>
-                </div>
+              All Fuel Consumptions
+              <div class="col-md-6 pull-right">
+                 <a href="{{route('add-fuel-data')}}" class="btn btn-success">Fuel Vehicle</a>
+                     </div>
             </div>
-            <div class="messaging">
-            <table border="0" cellspacing="5" cellpadding="5">
-        <tbody><tr>
-            <td>Minimum date:</td>
-            <td><input type="text" id="min" name="min"></td>
-        </tr>
-        <tr>
-            <td>Maximum date:</td>
-            <td><input type="text" id="max" name="max"></td>
-        </tr>
-    </tbody></table>
-    <table id="example" class="display nowrap" style="width:100%">
+            <div class="data-tables">
+      <div class="row">
+        <div class="col-lg-12 mb-4">
+          <div class="card card_border p-4">
+          <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>ID</th>
+                <th>Vehicle.No</th>
+                <th>Litres</th>
+                <th>Fuel Cost</th>
+                <th>Total Sale</th>
+                <th>Date Fueled</th>
             </tr>
         </thead>
         <tbody>
@@ -504,16 +496,18 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>ID</th>
+                <th>Vehicle.No</th>
+                <th>Litres</th>
+                <th>Fuel Cost</th>
+                <th>Total Sale</th>
+                <th>Date Fueled</th>
             </tr>
         </tfoot>
     </table>
-            </div>
+          </div>
+        </div>
+      </div>
           </div>
         </div>
       </div>
@@ -531,48 +525,5 @@
   </div>
   <!-- //content -->
 </div>
-@push('scripts')
-<script>
-var minDate, maxDate;
- 
- // Custom filtering function which will search data in column four between two values
- $.fn.dataTable.ext.search.push(
-     function( settings, data, dataIndex ) {
-         var min = minDate.val();
-         var max = maxDate.val();
-         var date = new Date( data[4] );
-  
-         if (
-             ( min === null && max === null ) ||
-             ( min === null && date <= max ) ||
-             ( min <= date   && max === null ) ||
-             ( min <= date   && date <= max )
-         ) {
-             return true;
-         }
-         return false;
-     }
- );
-  
- $(document).ready(function() {
-     // Create date inputs
-     minDate = new DateTime($('#min'), {
-         format: 'MMMM Do YYYY'
-     });
-     maxDate = new DateTime($('#max'), {
-         format: 'MMMM Do YYYY'
-     });
-  
-     // DataTables initialisation
-     var table = $('#example').DataTable();
-  
-     // Refilter the table
-     $('#min, #max').on('change', function () {
-         table.draw();
-     });
- });
-</script>
-@endpush
-
 
 
